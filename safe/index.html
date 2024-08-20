@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>당진재안안전</title>
+        <link rel="stylesheet" type="text/css" href="https://www.dangjin.go.kr/css/common2023/common.css?ver=1.0">
+        <link rel="stylesheet" type="text/css" href="https://www.dangjin.go.kr/css/common2023/cmpt.css?ver=1.0">
+        <link rel="stylesheet" type="text/css" href="https://www.dangjin.go.kr/css/common2023/slick.css?ver=1.0">
+	      <link rel="stylesheet" type="text/css" href="https://www.dangjin.go.kr/css/common2023/slick-theme.css?ver=1.0">
+
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/layout.css">
+        <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+
+        <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="./js/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="./js/slick.js"></script>
+        <script type="text/javascript" src="./js/swiper-bundle.min.js"></script>
+        <script src="https://www.dangjin.go.kr/js/common/script.js"></script>
+    </head>
+<body>
+
+<div id="wrapper">
+
+<!--[include]HEADER :: Start -->
+<!-- <div id="header"></div> -->
+<!--[include]HEADER :: End -->
+
+<main id="container">
+  <section id="mweather">
+    <div class="layout">
+      <h2><span>실시간으로 날씨를 확인하실 수 있습니다.</span>오늘의 <em class="c_point">당진</em> 안전날씨</h2>
+
+      <div id="weather_result">
+        <div class="w_info">
+          <span id="weather_day"><em>TODAY</em> 6.21 금</span>
+
+            <div id="district_nm1" style="display:block;">
+              <b class="area_name">당진시</b>
+              <div class="weather_info">
+                <span id="w_img"><img src="./images/weather/icon_wt01.png" alt="맑음"></span>
+                <span id="temp" class="temp"><b>26.5</b><span>℃</span></span>
+                <span class="dust"><strong>초미세먼지</strong><em>보통</em></span>
+                <span class="dust"><strong>미세먼지</strong><em>보통</em></span>
+                <ul>
+                  <li><b>강우량</b><span><span>0.0</span>mm</span></li>
+                  <li><b>적설량</b><span><span>0.0</span>cm</span></li>
+                  <li><b>오존</b><span><span>0.071</span>ppm</span></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div id="district_nm2" style="display:none">
+              <b class="area_name">합덥읍</b>
+              <div class="weather_info">
+                <span id="w_img"><img src="./images/weather/icon_wt01.png" alt="맑음"></span>
+                <span id="temp" class="temp"><b>26.5</b><span>℃</span></span>
+                <span class="dust"><strong>초미세먼지</strong><em>보통</em></span>
+                <span class="dust"><strong>미세먼지</strong><em>보통</em></span>
+                <ul>
+                  <li><b>강우량</b><span><span>0.0</span>mm</span></li>
+                  <li><b>적설량</b><span><span>0.0</span>cm</span></li>
+                  <li><b>오존</b><span><span>0.071</span>ppm</span></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div id="district_nm3" style="display:none">
+              <b class="area_name">송악읍</b>
+              <div class="weather_info">
+                <span id="w_img"><img src="./images/weather/icon_wt01.png" alt="맑음"></span>
+                <span id="temp" class="temp"><b>26.5</b><span>℃</span></span>
+                <span class="dust"><strong>초미세먼지</strong><em>보통</em></span>
+                <span class="dust"><strong>미세먼지</strong><em>보통</em></span>
+                <ul>
+                  <li><b>강우량</b><span><span>0.0</span>mm</span></li>
+                  <li><b>적설량</b><span><span>0.0</span>cm</span></li>
+                  <li><b>오존</b><span><span>0.071</span>ppm</span></li>
+                </ul>
+              </div>
+            </div>
+
+        </div>
+        <script>
+          function sltSpot(num){
+            for(spot_i=1 ; spot_i <= 18 ; spot_i++){
+              if(spot_i == num){
+                document.getElementById("district_nm"+num).style.display = "block";
+                document.getElementById("mark_"+num).classList.add('on');
+              } else {
+                document.getElementById("district_nm"+spot_i).style.display = "none";
+                document.getElementById("mark_"+spot_i).classList.remove('on');
+              }
+            }
+          }
+        </script>
+        <div class="map_img_area">
+          <div class="map_img">
+            <img src="./images/mapimg.png" alt="당진시 지도입니다." class="mapimg">
+            <a href="javascript:sltSpot(2);" id="mark_2" class="_marker _01">
+              <em>합덕읍</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(3);" id="mark_3" class="_marker _02">
+              <em>송악읍</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(4);" id="mark_4" class="_marker _03">
+              <em>고대면</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(5);" id="mark_5" class="_marker _04">
+              <em>석문면</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(6);" id="mark_6" class="_marker _05">
+              <em>대호지면</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(7);" id="mark_7" class="_marker _06">
+              <em>정미면</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(8);" id="mark_8" class="_marker _07">
+              <em>면천면</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(9);" id="mark_9" class="_marker _08">
+              <em>순성면</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(10);" id="mark_10" class="_marker _09">
+              <em>우강면</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(11);" id="mark_11" class="_marker _10">
+              <em>신평면</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(12);" id="mark_12" class="_marker _11">
+              <em>송산면</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(13);" id="mark_13" class="_marker _12">
+              <em>당진2동</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(14);" id="mark_14" class="_marker _13">
+              <em>당진3동</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+            <a href="javascript:sltSpot(1);" id="mark_1" class="_marker _14 on">
+              <em>당진1동</em> 
+              <span class="weather_temp"><i>온도</i> 0</span>
+              <span class="weather_img"><i>날씨</i><img src="./images/weather/icon_wt_sm05.png" alt="비"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="weather_lnk">
+        <h2><span>더 자세한 기상정보 이곳에서!</span> <em class="c_point">기상청</em> 날씨누리</h2>
+        <a href="#">
+          <span><em>날씨정보</em></span>
+        </a>
+        <a href="#">
+          <span><em>기상특보</em></span>
+        </a>
+        <a href="#">
+          <span><em>태풍특보</em></span>
+        </a>
+        <a href="#">
+          <span><em>바다예보</em></span>
+        </a>
+        <a href="#">
+          <span><em>농촌용수종합정보시스템</em></span>
+        </a>
+      </div>
+      <p class="weather_note1">※ 데이터는 실시간 관측된 자료이며 측정소 현지 사정이나 데이터의 수신 상태에 따라 미수신 될 수 있습니다.</p>
+    </div>
+    <p class="scroll">SCROLL DOWN</p>
+  </section>
+
+  <section id="section2">
+    <div class="layout">
+      <h2 class="sr-only">링크바로가기</h2>
+      <div class="quick_link">
+            <a href="#">
+              <i class="link_icon">더보기</i>
+              <div>
+                <b>실시간 <em>기상도</em></b>
+                <span>천리안위성으로<br>
+                  8분간 집중 관측 중!</span>
+              </div>
+            </a>
+            <a href="#">
+              <i class="link_icon">더보기</i>
+              <div>
+                <b><em>강우량</em> 현황</b>
+                <span>최근 6시간 동안<br>
+                  당진 강우량 상황은?</span>
+                </div>
+            </a>
+            <a href="#">
+              <i class="link_icon">더보기</i>
+              <div>
+                <b><em>조석</em> 정보</b>
+                <span>스마트 예보로<br>
+                  바다 상황을 확인하세요!</span>
+              </div>
+            </a>
+      </div>
+    </div>
+  </section> 
+  <section id="section3">
+    <div class="layout">
+      <div class="mborad">
+        <h2>안전 알림사항</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <b>2024 당진시 재난안전대챈본부 홈페이지 개편 알림</b>
+              <em class="text">2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다. 2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다. 2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다.</em>
+              <em class="date">2024-05-28</em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <b>2024 당진시 재난안전대챈본부 홈페이지 개편 알림</b>
+              <em class="text">2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다. 2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다. 2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다.</em>
+              <em class="date">2024-05-28</em>
+            </a>
+          </li>
+        </ul>
+        <div class="more"><a href="#"><span class="skip">안전 알림사항</span>더보기</a></div>
+      </div>
+      <div class="lnkbn">
+        <a href="#"><b>안전관리 일일상황</b></a>
+        <a href="#"><b>안전한 TV</b></a>
+        <a href="#"><b>무더위&middot;한파 쉼터 찾기</b></a>
+        <a href="#"><b>우리동네 대피소 찾기</b></a>
+      </div>
+    </div>
+  </section>
+  <section id="section4">
+    <div class="layout">
+      <h2><em class="c_point">신속한 신고 전화</em>가 <b>안전한 당진을 만듭니다.</b>
+        <span>빠르게 대응하여 시민의 행복을 지키겠습니다.</span>
+      </h2>
+      <ul>
+        <li>
+          <b>119안전신고센터</b>
+          <span>국번없이 119</span>
+        </li>
+        <li>
+          <b>재난/재해신고센터</b>
+          <span>041-350-4980</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="section5">
+    <div class="layout" id="acc_active">
+      <h2>사고 행동요령</h2>
+      <div class="tab">
+        <strong class="tabbn" data-tab="acc_1">
+          <a class="nav-link ov">안전사고</a>
+        </strong>
+        <div class="grap" id="acc_1">
+          
+
+          <!-- Swiper1 -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>교통사고1</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>교통사고2</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>교통사고3</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>교통사고4</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>교통사고5</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="pause">
+            <span class="stop">
+              <em class="skip">play/stop</em>
+            </span>
+          </button>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <a href="#" class="more">안전사고 행동요령 더보기</a>
+          <!-- //Swiper1 -->
+
+        </div>
+        <strong class="tabbn" data-tab="acc_2">
+          <a class="nav-link">응급처치</a>
+        </strong>
+        <div class="grap" id="acc_2">
+          <!-- Swiper2 -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>응급처치1</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>응급처치2</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>응급처치3</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>응급처치4</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>응급처치5</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>            
+          <button type="button" class="pause">
+            <span class="stop">
+              <em class="skip">play/stop</em>
+            </span>
+          </button>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <a href="#" class="more">응급처치 행동요령 더보기</a>
+          <!-- //Swiper2 -->
+        </div>
+        <strong class="tabbn" data-tab="acc_3">
+          <a class="nav-link">안전요령동영상</a>
+        </strong>
+        <div class="grap" id="acc_3">
+          <!-- Swiper3 -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>안전요령동영상1</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>안전요령동영상2</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>안전요령동영상3</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>안전요령동영상4</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w_area">
+                  <div class="wrap">
+                    <strong><b>안전요령동영상5</b>교통사고시 상황판단</strong>
+                    <p>교통사고 상황에서 구조대원의 의무는 상황을 판단하고 부상자에게 접근하여 신속한 조치는 물론, 피해자를 구출하여 병원으로 이송하는 것이다. 
+                      상황판단시 고려사항 관련된 차량의 수와 종류, 손상정도 : 작업을 부여 받은 대원과 장비들이 현장 상황을 다루는데 있어 필요한 것이나 할 수 있는 작업범위에 관한 의견을 제공해 준다.</p>
+                    <a href="#">자세히보기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="pause">
+            <span class="stop">
+              <em class="skip">play/stop</em>
+            </span>
+          </button>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <a href="#" class="more">안전요령동영상 더보기</a>
+          <!-- //Swiper3 -->
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function() {
+        // 탭 메뉴를 1번으로 초기화
+        $('.tab strong:eq(0)').addClass('current');
+        $('#acc_1').addClass('current');
+        });
+    
+        //탭 바 클릭 이벤트
+        // 클릭할 때 마다 포커스 되는 
+        $('.tab').on("click","strong",function(event){
+            var tab_id = $(this).attr('data-tab');
+            $('.tab strong').removeClass('current');
+            $('.grap').removeClass('current');
+            $(this).addClass('current');
+            $("#"+tab_id).addClass('current');
+        });
+
+      const swiper1 =  new Swiper('#acc_1 .swiper', {
+        slidesPerView: 3,
+        spaceBetween:-340,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '#acc_1 .swiper-button-next',
+          prevEl: '#acc_1 .swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween:20,
+            },
+            960: {
+                slidesPerView: 4,
+                spaceBetween:-340,
+            }
+        },
+      })
+      $('#acc_1 .pause').on('click', function() {
+        if(swiper1.autoplay.running) {
+          swiper1.autoplay.stop();
+        }else {
+          swiper1.autoplay.start();
+        }
+        $(this).toggleClass('play');
+      })
+
+      const swiper2 =  new Swiper('#acc_2 .swiper', {
+        slidesPerView: 3,
+        spaceBetween:-340,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '#acc_2 .swiper-button-next',
+          prevEl: '#acc_2 .swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween:20,
+            },
+            960: {
+                slidesPerView: 4,
+                spaceBetween:-340,
+            }
+        },
+      })
+      $('#acc_2 .pause').on('click', function() {
+        if(swiper2.autoplay.running) {
+          swiper2.autoplay.stop();
+        }else {
+          swiper2.autoplay.start();
+        }
+        $(this).toggleClass('play');
+      })
+
+      const swiper3 =  new Swiper('#acc_3 .swiper', {
+        slidesPerView: 3,
+        spaceBetween:-340,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '#acc_3 .swiper-button-next',
+          prevEl: '#acc_3 .swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween:20,
+            },
+            960: {
+                slidesPerView: 4,
+                spaceBetween:-340,
+            }
+        },
+      })
+      $('#acc_3 .pause').on('click', function() {
+        if(swiper3.autoplay.running) {
+          swiper3.autoplay.stop();
+        }else {
+          swiper3.autoplay.start();
+        }
+        $(this).toggleClass('play');
+      })
+
+      </script>
+  </section>
+
+  <section id="section6" >
+    <div class="layout">
+      <div class="tit">
+        <h2>재난시 <span>시민행동요령</span></h2>
+        <p>재난시, 알아둬야할 행동요령!</p>
+      </div>
+      <div class="post-wrapper" id="safeaction">
+        <a href="#" class="item1"><i></i><b>지진/해일 행동요령</b></a>
+        <a href="#" class="item2"><i></i><b>대설/한파 행동요령</b></a>
+        <a href="#" class="item3"><i></i><b>폭염/가뭄 행동요령</b></a>
+        <a href="#" class="item4"><i></i><b>황사/적조 행동요령</b></a>
+        <a href="#" class="item1"><i></i><b>지진/해일 행동요령</b></a>
+        <a href="#" class="item2"><i></i><b>대설/한파 행동요령</b></a>
+        <a href="#" class="item3"><i></i><b>폭염/가뭄 행동요령</b></a>
+        <a href="#" class="item4"><i></i><b>황사/적조 행동요령</b></a>
+    </div>
+  </div>
+  </section>
+  <section class="layout" >
+    <h2 class="skip">관련기관 배너</h2>
+    <div class="post-wrapper" id="bann">
+      <a href="#"><span><img src="./images/bann01.png" alt=""></span></a>
+      <a href="#"><span><img src="./images/bann02.png" alt=""></span></a>
+      <a href="#"><span><img src="./images/bann03.png" alt=""></span></a>
+      <a href="#"><span><img src="./images/bann04.png" alt=""></span></a>
+      <a href="#"><span><img src="./images/bann05.png" alt=""></span></a>
+      <a href="#"><span><img src="./images/bann06.png" alt=""></span></a>
+      <a href="#"><span><img src="./images/bann01.png" alt=""></span></a>
+      <a href="#"><span><img src="./images/bann02.png" alt=""></span></a>
+      <a href="#"><span><img src="./images/bann03.png" alt=""></span></a>
+      <a href="#"><span><img src="./images/bann04.png" alt=""></span></a>
+      <a href="#"><span><img src="./images/bann05.png" alt=""></span></a>
+      <a href="#"><span><img src="./images/bann06.png" alt=""></span></a>
+    </div>
+  </section>
+<!--[include]FOOTER :: Start -->
+<!-- <div id="footer"></div> -->
+<!--[include]FOOTER :: End -->
+</main>
+
+</div>
+
+<script>
+$('#safeaction').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  variableWidth: true
+});
+$('#bann').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+</script>
+
+</body>
+</html>

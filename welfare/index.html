@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>당진복지</title>
+        <link rel="stylesheet" type="text/css" href="https://www.dangjin.go.kr/css/common2023/common.css?ver=1.0">
+        <link rel="stylesheet" type="text/css" href="https://www.dangjin.go.kr/css/common2023/cmpt.css?ver=1.0">
+        <link rel="stylesheet" type="text/css" href="https://www.dangjin.go.kr/css/common2023/slick.css?ver=1.0">
+	      <link rel="stylesheet" type="text/css" href="https://www.dangjin.go.kr/css/common2023/slick-theme.css?ver=1.0">
+
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/layout.css">
+
+        <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="./js/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="./js/slick.js"></script>
+        <script src="https://www.dangjin.go.kr/js/common/script.js"></script><!-- common 탭 사용-->
+    </head>
+<body>
+
+<div id="wrapper">
+
+<!--[include]HEADER :: Start -->
+<!-- <div id="header"></div> -->
+<!--[include]HEADER :: End -->
+
+<main id="container">
+  <section id="section1">
+      <h2><span>필요한 복지서비스를 한눈에!</span>당진시민의 <em class="c_point">복지도우미</em></h2>
+      <!-- slick -->
+      <div class="post-wrapper">
+        <a href="#" class="item1">
+            <b>영유아</b>
+            <ul>
+              <li>디딤씨앗통장(CDA)</li>
+              <li>아동급식지원</li>
+              <li>지역아동센터 운영</li>
+              <li>청소년보호사업</li>
+              <li>드림스타트</li>
+            </ul>
+        </a>
+        <a href="#" class="item2">
+            <b>아동·청소년</b>
+            <ul>
+              <li>디딤씨앗통장(CDA)</li>
+              <li>아동급식지원</li>
+              <li>지역아동센터 운영</li>
+              <li>청소년보호사업</li>
+              <li>드림스타트</li>
+            </ul>
+        </a>
+        <a href="#" class="item3">
+          <b>여성·가족</b>
+          <ul>
+            <li>아이행복카드</li>
+            <li>보육시설현황</li>
+            <li>보육료지원</li>
+          </ul>
+        </a>
+        <a href="#" class="item4">
+            <b>어르신</b>
+            <ul>
+              <li>생활지원안내</li>
+              <li>노인일자리 안내</li>
+              <li>장묘(장사)안내</li>
+              <li>노인장기요양보험제도</li>
+            </ul>
+        </a>
+        <a href="#" class="item5">
+            <b>장애인</b>
+            <ul>
+              <li>장애인 등록안내</li>
+              <li>장애인 지원사업</li>
+              <li>장애인 복지서비스</li>
+            </ul>
+        </a>
+      </div>
+      <div class="control">
+        <button type="button" class="button ctrl bn_stop" data-control="stop">팝업 정지</button>
+        <button type="button" style="display: none" class="button ctrl bn_play" data-control="play">팝업 재생</button>
+      </div>	
+      <div class="numcount sPage1"><span class="now">01</span><span>05</span></div>
+      <!-- //slick -->
+  </section>
+
+  <section id="section2">
+    <div class="layout">
+      <div class="tit">
+        <h2>복지<em class="c_point">검색</em></h2>
+        <p>당진시의 다양한 서비스를 쉽게 찾아보고 이용하세요</p>
+      </div>
+      <div class="create_box">
+        <div class="create_item item1">
+          <strong class="item_title"><em>생애주기</em> 선택</strong>
+          <ul class="option_select">
+              <li>
+                  <input type="checkbox" id="life_c1">
+                  <label for="life_c1" class="box_btn">전체</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="life_c2">
+                  <label for="life_c2" class="box_btn">영유아</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="life_c3">
+                  <label for="life_c3" class="box_btn">아동</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="life_c4">
+                  <label for="life_c4" class="box_btn">청소년</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="life_c5">
+                  <label for="life_c5" class="box_btn">청년</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="life_c6">
+                  <label for="life_c6" class="box_btn">중장년</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="life_c7">
+                  <label for="life_c7" class="box_btn">노년</label>
+              </li>
+          </ul>
+        </div>
+        <div class="create_item item2">
+          <strong class="item_title"><em>가구상황</em> 선택</strong>
+          <ul class="option_select">
+              <li>
+                  <input type="checkbox" id="life1">
+                  <label for="life1" class="box_btn">전체</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="life2">
+                  <label for="life2" class="box_btn">다문화</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="life3">
+                  <label for="life3" class="box_btn">다자녀</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="life4">
+                  <label for="life4" class="box_btn">장애인</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="life5">
+                  <label for="life5" class="box_btn">저소득</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="life6">
+                  <label for="life6" class="box_btn">한부모</label>
+              </li>
+          </ul>
+        </div>
+        <div class="create_item item3">
+          <strong class="item_title"><em>생애주기</em> 선택</strong>
+          <ul class="option_select">
+              <li>
+                  <input type="checkbox" id="fav1">
+                  <label for="fav1" class="box_btn">전체</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav2">
+                  <label for="fav2" class="box_btn">생활지원</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav3">
+                  <label for="fav3" class="box_btn">주거</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav4">
+                  <label for="fav4" class="box_btn">일자리</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav5">
+                  <label for="fav5" class="box_btn">문화&middot;여가</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav6">
+                  <label for="fav6" class="box_btn">임신&middot;출산</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav7">
+                  <label for="fav7" class="box_btn">보육</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav8">
+                  <label for="fav8" class="box_btn">교육</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav9">
+                  <label for="fav9" class="box_btn">입양&middot;위탁</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav10">
+                  <label for="fav10" class="box_btn">보호&middot;돌봄</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav11">
+                  <label for="fav11" class="box_btn">서민금융</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav12">
+                  <label for="fav12" class="box_btn">법률</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav13">
+                  <label for="fav13" class="box_btn">식생활(결식)</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav14">
+                  <label for="fav14" class="box_btn">여성</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav15">
+                  <label for="fav15" class="box_btn">상담</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav16">
+                  <label for="fav16" class="box_btn">신체건강</label>
+              </li>
+              <li>
+                  <input type="checkbox" id="fav17">
+                  <label for="fav17" class="box_btn">정신건강</label>
+              </li>
+          </ul>
+        </div>
+        <div class="btnwrap">
+          <a href="#" class="bn reset">선택초기화</a>
+          <a href="#" class="bn search">선택결과보기</a>
+        </div>
+        <a href="#" class="btn_close">접기</a>
+      </div>
+    </div>
+  </section> 
+
+  <section id="section3">
+    <div class="layout">
+      <div class="mborad">
+        <h2>복지<em>소식</em></h2>
+        <div class="tab">
+          <strong class="tabbn"><a href="#borad1" class="ov">공지사항</a></strong>
+          <div class="grap" id="borad1">
+            <ul>
+              <li>
+                <a href="#">
+                  <b>2024 당진시 재난안전대챈본부 홈페이지 개편 알림</b>
+                  <em class="text">2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다. 2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다. 2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다.</em>
+                  <em class="date">06.15</em>
+                  <em class="part">경로장애인과</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <b>2024 당진시 재난안전대챈본부 홈페이지 개편 알림</b>
+                  <em class="text">2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다. 2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다. 2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다.</em>
+                  <em class="date">06.15</em>
+                  <em class="part">경로장애인과</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <b>2024 당진시 재난안전대챈본부 홈페이지 개편 알림</b>
+                  <em class="text">2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다. 2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다. 2024년 재난안전본부 홈페이지를 개편하였습니다. 많은 이용과 관심 바랍니다. 감사합니다.</em>
+                  <em class="date">06.15</em>
+                  <em class="part">경로장애인과</em>
+                </a>
+              </li>
+            </ul>
+            <a href="#"  class="more">공지사항 더보기</a>
+          </div>
+          <strong class="tabbn"><a href="#borad2">채용공고</a></strong>
+          <div class="grap" id="borad2">
+            ㅇㅇㅇ
+          </div>
+          <script>
+            $(document).ready(function(){
+              var btn = ".mborad strong > a";
+              var option = {lv:1,obj:".mborad .grap"};
+              targetOpener(btn,option);
+            });
+          </script>
+        </div>
+      </div>
+      <div class="lnkbn">
+        <h2><em class="c_point">장애인</em>일자리지원</h2>
+        <a href="#">복지일자리사업</a>
+        <a href="#">일반형일자리사업</a>
+        <a href="#">한국장애인고용공단</a>
+      </div>
+    </div>
+  </section>
+  <section id="section4">
+    <div class="layout" id="welfare_fac">
+      <div class="tit">
+      <h2><em>당진 복지광장</em>복지시설안내</h2>
+      <p>당진시민이 언제든 이용하실 수 있도록
+        <span>복지시설을 운영하고 있습니다.</span></p>
+      </div>
+      <div class="tab">
+        <strong class="tabbn"><a href="#fac1" class="ov">아동, 청소년</a></strong>
+        <div class="grap" id="fac1">
+        <!-- slick -->
+        <div class="post-wrapper">
+            <a href="#">
+              <div>
+                <b>당진시립노인요양원</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+                <b>당진시립노인요양원</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+              <b>당진시립노인요양원</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+              <b>당진시립노인요양원</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+                <b>당진시립노인요양원</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+                <b>당진시립노인요양원</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+        </div>
+        <div class="control">
+          <button type="button" class="button ctrl bn_stop" data-control="stop">팝업 정지</button>
+          <button type="button" style="display: none" class="button ctrl bn_play" data-control="play">팝업 재생</button>
+        </div>	
+        <a href="#" class="more">더보기</a>
+         <!-- //slick -->
+
+        </div>
+        <strong class="tabbn"><a href="#fac2">여성, 가족</a></strong>
+        <div class="grap" id="fac2">
+        <!-- slick -->
+        <div class="post-wrapper">
+          <a href="#">
+            <div>
+              <b>여성, 가족</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <b>여성, 가족</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+            <b>여성, 가족</b>
+            <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+            <b>여성, 가족</b>
+            <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <b>여성, 가족</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <b>여성, 가족</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+        </div>
+        <div class="control">
+          <button type="button" class="button ctrl bn_stop" data-control="stop">팝업 정지</button>
+          <button type="button" style="display: none" class="button ctrl bn_play" data-control="play">팝업 재생</button>
+        </div>	
+        <a href="#" class="more">더보기</a>
+        <!-- //slick -->
+        </div>
+        <strong class="tabbn"><a href="#fac3">어르신</a></strong>
+        <div class="grap" id="fac3">
+        <!-- slick -->
+        <div class="post-wrapper">
+          <a href="#">
+            <div>
+              <b>어르신</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <b>어르신</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+            <b>어르신</b>
+            <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+            <b>어르신</b>
+            <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <b>어르신</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <b>어르신</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+            </div>
+          </a>
+        </div>
+        <div class="control">
+          <button type="button" class="button ctrl bn_stop" data-control="stop">팝업 정지</button>
+          <button type="button" style="display: none" class="button ctrl bn_play" data-control="play">팝업 재생</button>
+        </div>	
+        <a href="#" class="more">더보기</a>
+        <!-- //slick -->
+        </div>
+        <strong class="tabbn"><a href="#fac4">장애인</a></strong>
+        <div class="grap" id="fac4">
+          <!-- slick -->
+          <div class="post-wrapper">
+            <a href="#">
+              <div>
+                <b>장애인</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+                <b>장애인</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+              <b>장애인</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+              <b>장애인</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+                <b>장애인</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+                <b>장애인</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+          </div>
+          <div class="control">
+            <button type="button" class="button ctrl bn_stop" data-control="stop">팝업 정지</button>
+            <button type="button" style="display: none" class="button ctrl bn_play" data-control="play">팝업 재생</button>
+          </div>	
+          <a href="#" class="more">더보기</a>
+          <!-- //slick -->
+        </div>
+        <strong class="tabbn"><a href="#fac5">저소득, 자활</a></strong>
+        <div class="grap" id="fac5">
+          <!-- slick -->
+          <div class="post-wrapper">
+            <a href="#">
+              <div>
+                <b>저소득, 자활</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+                <b>저소득, 자활</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+              <b>저소득, 자활</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+              <b>저소득, 자활</b>
+              <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+                <b>저소득, 자활</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+            <a href="#">
+              <div>
+                <b>저소득, 자활</b>
+                <span class="thumb"><img src="./images/sc4_img1.png" alt="시설사진"></span>
+              </div>
+            </a>
+          </div>
+          <div class="control">
+            <button type="button" class="button ctrl bn_stop" data-control="stop">팝업 정지</button>
+            <button type="button" style="display: none" class="button ctrl bn_play" data-control="play">팝업 재생</button>
+          </div>	
+          <a href="#" class="more">더보기</a>
+          <!-- //slick -->
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function(){
+          var btn = "#welfare_fac strong > a";
+          var option = {lv:1,obj:"#welfare_fac .grap"};
+          targetOpener(btn,option);
+        });
+      </script>
+  </section>
+
+  <section id="section5">
+    <div class="layout">
+      <div class="tit">
+        <span>당진시의 빈츰없는 지원</span>
+        <h2>당진시 <em>복지 중점사업</em>을 소개합니다</h2>
+      </div>
+      <ul>
+        <li class="item">
+          <strong>임신출산육아 지원시책</strong>
+          <p>임신을 준비하는 부부부터 임산부, 출산, 육아까지 당진시 도담도담 행복한 우리가족이 지원합니다.
+            당진시에서 배포하고 있는 홍보 안내물에서 지원 내용을 자세히 확인하실 수 있습니다.</p>
+          <ul>
+            <li><a href="#" class="bn_blank">지원시책 바로보기</a></li>
+            <li><a href="#" class="bn_down">지원시책 다운로드</a></li>
+          </ul>
+        </li>
+        <li class="item">
+          <strong>바우처 사업</strong>
+          <p>바우처는 어떤 상품을 구매할 수 있는 증서 의미. 사회서비스 바우처 제도는 노인, 장애인, 산모, 아동 등 사회서비스를 필요로 하는 사람에게 일종의 이용권을 발급하여 서비스를 받을 수 있도록 하는 제도. 전자바우처는 사회서비스를 편리하게 이용할 수 있도록 현금카드 형태로 지급되며, 서비스의 신청에서 이용과 비용지급, 정산 등 전 과정이 전자시스템으로 처리</p>
+          <ul>
+            <li><a href="#" class="bn_lnk">바우처란</a></li>
+            <li><a href="#" class="bn_lnk">가사 간병 방문 지원사업</a></li>
+            <li><a href="#" class="bn_lnk">장애인 가족 지원사업</a></li>
+            <li><a href="#" class="bn_lnk">지역 사회서비스 투자</a></li>
+          </ul>
+        </li>
+        <li class="item">
+          <strong>장묘 사업</strong>
+          <p>매장및묘지등에관한법률이 장사등에관한법률로 전문개정(2001.1.13 부터시행). 개인묘지, 화장장, 납골시설 설치를 허가제에서 신고제로 전환. 묘지의 설치면적을 최소화 하고 집단화된 묘지의 1 기당 점유면적을 10 ㎡이하로 제한. 매장허가기간을 30년으로 제한하고 허가기간 종료 후 납골을 의무화. 30년씩 1회연장(총60년 매장가능). 타인의 토지에 승낙없이 설치된 분묘의 연고권 불인정</p>
+          <ul>
+            <li><a href="#" class="bn_lnk">관렬법률</a></li>
+            <li><a href="#" class="bn_lnk">관련민원 안내</a></li>
+            <li><a href="#" class="bn_lnk">당진시 공설묘지 안내</a></li>
+            <li><a href="#" class="bn_lnk">당진시 공설봉안당 안내</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="section6" >
+    <h2 class="skip">바로가기 링크모음</h2>
+    <div class="layout">
+      <a href="#" class="boxlnk">
+        <strong>
+          전국 어디서나<em>보건복지 콜센터</em>
+        </strong>
+      </a>
+      <a href="#" class="boxlnk">
+        <strong>
+          대한민국 복지<em>복지로</em>
+        </strong>
+      </a>
+      <div class="tab" id="infowrap">
+        <strong class="tabbn"><a href="#info1" class="ov">당진시 일자리 종합지원센터</a></strong>
+        <div class="grap" id="info1">
+          <p>1522-3113</p>
+          <ul>
+            <li><b>평일</b><span>08:30~18:30</span><em>토·일·공휴일 휴무</em></li>
+            <li><b>인원</b><span>9명</span></li>
+          </ul>
+          <a href="#">업무&middot;전화번호안내 바로가기</a>
+        </div>
+        <strong class="tabbn"><a href="#info2">당진시 여성의 전당</a></strong>
+        <div class="grap" id="info2">
+          <p>전당1522-3113</p>
+          <ul>
+            <li><b>평일</b><span>08:30~18:30</span><em>토·일·공휴일 휴무</em></li>
+            <li><b>인원</b><span>9명</span></li>
+          </ul>
+          <a href="#">업무&middot;전화번호안내 바로가기</a>
+        </div>
+        <strong class="tabbn"><a href="#info3">고용복지센터</a></strong>
+        <div class="grap" id="info3">
+          <p>고용1522-3113</p>
+          <ul>
+            <li><b>평일</b><span>08:30~18:30</span><em>토·일·공휴일 휴무</em></li>
+            <li><b>인원</b><span>9명</span></li>
+          </ul>
+          <a href="#">업무&middot;전화번호안내 바로가기</a>
+        </div>
+        <strong class="tabbn"><a href="#info4">드림스타트</a></strong>
+        <div class="grap" id="info4">
+          <p>드림1522-3113</p>
+          <ul>
+            <li><b>평일</b>08:30~18:30 <em>토·일·공휴일 휴무</em></li>
+            <li><b>인원</b>9명</li>
+          </ul>
+          <a href="#">업무&middot;전화번호안내 바로가기</a>
+        </div>
+      </div>
+      <script>
+        $(document).ready(function(){
+          var btn = "#infowrap strong > a";
+          var option = {lv:1,obj:"#infowrap .grap"};
+          targetOpener(btn,option);
+        });
+      </script>
+    </div>
+  </section>
+<!--[include]FOOTER :: Start -->
+<!-- <div id="footer"></div> -->
+<!--[include]FOOTER :: End -->
+</main>
+
+</div>
+
+<script type="text/javascript">
+$('#section1 .post-wrapper').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  variableWidth: true,
+  centerMode: true,
+  centerPadding: '32px',
+});
+$('#section1 .post-wrapper').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){ 
+  var i = (currentSlide ? currentSlide : 0) + 1;
+  $('.sPage1').html("<span class='now'>0"+i+"</span><span>0"+slick.slideCount+"</span>");
+});
+$('#section1 .control .ctrl').click(function(){
+  $(this).css({display: 'none'}).siblings('#section1 .control .ctrl').css({display: 'inline-block'});
+  if ($(this).hasClass('bn_stop')) {
+    $('#section1 .post-wrapper').slick('slickPause');
+  } else {
+    $('#section1 .post-wrapper').slick('slickPlay');
+  };
+});
+
+$("#section4 .grap").each(function(index, element){
+    var $this = $(this);
+    $this.addClass('instance-' + index);
+    
+    $(this).find('.post-wrapper').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      variableWidth: true,
+    });
+
+    $('.instance-'+ index).find('.control .ctrl').click(function(){
+      $(this).css({display: 'none'}).siblings('.grap .control .ctrl').css({display: 'inline-block'});
+      if ($(this).hasClass('bn_stop')) {
+        $('.instance-'+ index).find('.post-wrapper').slick('slickPause');
+      } else {
+        $('.instance-'+ index).find('.post-wrapper').slick('slickPlay');
+      };
+    });
+});
+</script>
+
+</body>
+</html>

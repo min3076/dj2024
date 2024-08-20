@@ -1,0 +1,61 @@
+@charset "UTF-8";
+:root {
+	/* Primary - color */
+	--c_primary : #4D8DE7;
+	--c_secondary : #57BBAD;
+	--c_gray : #D3D3D3;
+	--c_point : #B32A4C;
+
+	/*  color - more */
+	--c_primary_m10 : #1873DE;
+	--c_primary_m : #1E4298;
+	--c_secondary_m : #009980;
+
+	/* color - 10 */
+	--c_primary_10 : #e7f3ff;
+	--c_secondary_10 : #EFFDF4;
+
+	/* color - 40 */
+	--c_primary_40 : #b9dcff;
+	--c_secondary_40 : #EFFDF4;
+
+	/* color - default */
+	--c_white:#fff;
+	--c_black:#000;
+
+	/* color - grayscale */
+	--c_gray_5 : #F5F7FB;
+	--c_gray_10 : #F8F9FA;
+	--c_gray_20 : #E9ECEF;
+	--c_gray_30 : #DEE2E6;
+	--c_gray_40 : #CED4DA;
+	--c_gray_50 : #8D9BA8;
+	--c_gray_60 : #6C757D;
+	--c_gray_70 : #495057;
+	--c_gray_80 : #343A40;
+	--c_gray_90 : #212529;
+
+	/* color - theme */
+	--c_themeA:#FF82BB;
+	--c_themeA_10:#FFEFF6;
+	--c_themeB:#E7A702;
+	--c_themeB_10:#FFFCE2;
+	--c_themeC:#ED562F;
+	--c_themeC_10:#FFECE8;
+
+	/* bg / line - color */
+	--bg_line1 : #F8F8F8;
+	--bg_line2 : #F9F9F9;
+
+	--f_sunn:'SUIT';
+	--f_gmarket:'gmarket';
+	--f_nsN:'NanumSquareNeo';
+	--f_scd:'score';
+	--f_pch: 'pchp';
+
+	--ani_time:.3s;
+	--load_time:3s;
+}
+
+/* 적용예시 */
+.color-blue{color:var(--c_primary_m);}

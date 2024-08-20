@@ -1,0 +1,53 @@
+<footer class="inner">
+    <div class="floating">
+        <a href="#wrap" class="btn_top">상단위로 이동</a>
+    </div>
+    <div class="footer_l">
+        <div class="guide_list">
+            <a href="#">이용안내</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">이메일무단수집거부</a>
+        </div>
+        <div class="footer_info">
+            <address>(54538)32255 충남 홍성군 홍북면 선화로 22</address>
+            <span class="tel">Tel.041-000-0000</span>
+            <span class="fax">Fax.041-000-000</span>
+        </div>
+        <p class="footer_copy">COPYRIGHT© 2024 충청남도교육청. ALL RIGHTS RESERVED.</p>
+    </div>
+    <div class="footer_r" id="familysite"> 
+        <div class="designSelect">
+            <div class="lay">
+                <strong><a href="#familysite">패밀리사이트</a></strong>
+            </div>
+            <div class="lists">
+                <ul>
+                    <li><a href="#">패밀리사이트1</a></li>
+                    <li><a href="#">패밀리사이트2</a></li>
+                    <li><a href="#">패밀리사이트3</a></li>
+                    <li><a href="#">패밀리사이트4</a></li>
+                    <li><a href="#">패밀리사이트5</a></li>
+                </ul>
+            </div>                  
+        </div>
+    </div>
+</footer>
+
+<script>
+    // top_btn
+    $(function () {
+        // Floating
+        $.fn.floating = function(){
+            var $window = $(window),$target = $('.btn_top');
+                $window.scroll(function() {
+                    ($window.scrollTop() > 100) ? $target.addClass('show') : $target.removeClass('show');
+                });
+            $('.btn_top').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, 300);
+            });
+        }
+        $.fn.floating();
+    });
+</script>
+

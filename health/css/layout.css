@@ -1,0 +1,43 @@
+@charset "utf-8";
+#accessibility-quick,
+#accessibility-gnb,
+#accessibility-content,
+#accessibility-mcontent {position:fixed;top:0;left:0;width:100%}
+.pc {display:block}
+.mo {display:none}
+.layout {position:relative;margin:0 auto;max-width:1600px;width:95%}
+.layout:after {content:"";display:block;clear:both}
+.ir {overflow:hidden}
+.ir:before {content:"";display:inline-block;vertical-align:top;width:100%;height:100%}
+
+@media(min-width:1280px) {
+	.pc {display:block}
+	.mo {display:none}
+    .layout {width:95%;}
+}
+
+
+/* 공통 - 닫기버튼 */
+.clickClose {height:62px;width:62px;background:none}
+.clickClose:before{content:' ';position:absolute;left:0;top:0;height:62px;width:62px;background:url(/images/kor2/common/ico_close_w.svg) no-repeat;background-size:100% auto;transform:rotate(0deg);transition:transform .4s ease-in-out;}
+.clickClose:hover::before,
+.clickClose:focus::before{transform: rotate(360deg);}
+@media (max-width:500px){
+	.clickClose,
+	.clickClose:before{height:42px;width:42px;}
+}
+
+#wrap{position:relative;width:100%;overflow:hidden}
+#header{display:flex;position:relative;width:95%;max-width:1600px;margin:0 auto;height:76px;z-index:100;}
+#logo{position:absolute;top:18px;left:24px;width:182px;height:49px;margin:0;z-index:101;}
+#logo .ir-logo{border:none;display:block;margin:0;padding:0;width:159px;height:42px;font-size:0;line-height:0;background:url(/images/common2023/logo_kor.svg) no-repeat;background-size:100% auto;}
+
+@media (max-width:1280px){
+    #header {display:none;}
+    #logo {position:static;width:182px;height:49px;margin:0 auto;background-size:50%;}
+}
+@media (max-width:500px){
+    #logo{margin:0;}
+    #logo .ir-logo{width:129px;height:34px;}
+}
+

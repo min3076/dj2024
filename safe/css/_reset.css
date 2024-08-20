@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, button,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, select {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* font-size:100%; */
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+em, i{
+	font-style: normal;
+}
+img {
+	max-width:100%;
+	border:0;
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight:normal;
+	font-size:100%
+}
+dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote {
+	margin:0;
+	padding:0
+}
+input[type="search"] {
+	-webkit-appearance:textfield;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	box-sizing:content-box
+}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance:none
+}
+input[type="checkbox"],input[type="radio"] {
+	box-sizing:border-box
+}
+select {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+select:focus {
+	position:relative
+}
+form label,form input,form span,form img,form em,form a {
+	display:inline-block;
+	margin-top:0;
+	vertical-align:middle
+}
+form fieldset,legend,form input {
+	border:0
+}
+a {text-decoration: none;color:var(--c_gray_90);}
+button {border: 0;background: none; cursor: pointer;}
+i,em{font-style:normal;}
