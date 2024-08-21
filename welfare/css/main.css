@@ -44,10 +44,10 @@ section h2 em{color:#4D8DE7}
 .total span.current{color:#355F9B;font-weight:700;}
 .total span.line{margin-right:3px;}
 
-#container::before{content:'';position:absolute;left:50%;top: 960px;transform: translateX(-1060px);display:block;width:702px;height:702px;background:url(../images/sc2_bg1.png) no-repeat 100%}
+#container::before{content:'';position:absolute;left:50%;top:840px;transform: translateX(-1060px);display:block;width:702px;height:702px;background:url(../images/sc2_bg1.png) no-repeat 100%}
 
 /* section2 */
-#section2{z-index:10;position:relative;margin-top:-430px;margin-bottom:150px;}
+#section2{z-index:10;position:relative;margin-top:-520px;margin-bottom:150px;}
 #section2::after{content:'';position:absolute;left:50%;top:-320px;transform:translateX(-1050px);display:block;width:702px;height:702px;background:url(../images/sc2_bg1.png) no-repeat 100%}
 #section2::after{left:50%;top:auto;bottom:-100px;width:544px;height:702px;background-image:url(../images/sc2_bg2.png);transform:translate(600px, 360px);}
 #section2 .tit{display:flex;align-items:flex-end;gap:20px;}
