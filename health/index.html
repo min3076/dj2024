@@ -13,10 +13,13 @@
         <link rel="stylesheet" href="./css/common.css">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/layout.css">
+        <link rel="stylesheet" href="./css/aos.css">
 
         <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="./js/jquery-latest.min.js"></script>
         <script type="text/javascript" src="./js/slick.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
+        <script type="text/javascript" src="./js/aos.js"></script>
         <script src="https://www.dangjin.go.kr/js/common/script.js"></script><!-- common 탭 사용-->
     </head>
 <body>
@@ -31,13 +34,13 @@
   <section id="section1">
     <div class="layout">
       <div class="wrap">
-      <div class="info">
+      <div class="info" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic">
         <p class="copy">당진시민의 건강하고 행복한 생활을 위해 최선의 노력을 다합니다.</p>
-        <h2>
+        <h2 data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="200">
           <b><em>행복</em>과 
           <em>활력</em>이 넘치는</b>
           건강한 당진</h2>
-        <div>
+        <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="300">
           <h3>보건소안내</h3>
           <p><em>09:00~18:00</em>(주말&middot;공휴일 휴무)</p>
           <ul>
@@ -51,30 +54,47 @@
           </div>
         </div>
       </div>
-      <div id="popupzone">
+      <div id="popupzone" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic">
         <h2>알립니다</h2>
-
-        <!-- slick -->
-        <div class="post-wrapper">
-          <a href="#"><img src="./images/pzone1.png" alt=""></a>
-          <a href="#"><img src="./images/pzone1.png" alt=""></a>
-          <a href="#"><img src="./images/pzone1.png" alt=""></a>
-          <a href="#"><img src="./images/pzone1.png" alt=""></a>
-          <a href="#"><img src="./images/pzone1.png" alt=""></a>
+        <div class="slide_wrap">
+            <div class="slide">
+              <div class='item'><img src="./images/pzone1.png" alt=""></div>
+              <div class='item'><img src="./images/pzone1.png" alt=""></div>
+              <div class='item'><img src="./images/pzone1.png" alt=""></div>
+            </div>
+            <div class="control">
+              <div class="total">
+                <span class="current">01</span> 
+                <span class="line"><em>/</em></span>
+                <span class="count">00</span>
+              </div>
+              <div class="progress">
+                  <span></span>
+              </div>
+              <button type="button" class="button prev" data-control="prev"><span>팝업존 슬라이드 이전</span></button>
+              <button type="button" class="button next" data-control="next"><span>팝업존 슬라이드 다음</span></button>
+              <button type="button" class="button stop" data-control="stop"><span>팝업존 슬라이드 정지</span></button>
+              <button type="button" class="button play" data-control="play"><span>팝업존 슬라이드 재생</span></button>
+            </div>
         </div>
-        <div class="control">
-           <button type="button" class="button ctrl bn_stop" data-control="stop">팝업 정지</button>
-           <button type="button" style="display: none" class="button ctrl bn_play" data-control="play">팝업 재생</button>
-        </div>	
-        <div class="numcount sPage1"><span class="now">01</span><span>05</span></div>
-        
       </div>
     </div>
     </div>
+
+
+    
+
   </section>
 
+
+
+
+
+        
+
+
   <section id="section2">
-    <div class="layout">
+    <div class="layout"  data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="500">
     <h2 class="skip">자주찾는서비스</h2>
     <p>당진시보건소의 주요서비스를 편리하게 이용하세요!</p>
     <div id="favMenu">
@@ -102,8 +122,9 @@
     </div>
     </div>
   </section>
+
   <section id="section3">
-    <div class="layout">
+    <div class="layout" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="200">
         <h2>보건소 <em>새소식</em></h2>
         <div class="tab" id="boardwrap">
           <strong class="tabbn"><a href="#news1" class="ov">공지사항</a></strong>
@@ -193,8 +214,9 @@
     </div>
   </section>
   
-  <section id="section4">
-    <div class="layout">
+  <section id="section4" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="400">
+    <span class="bgtx"></span>
+    <div class="layout" id="health_center">
       <div class="tit">
         <p>우리동제보건소, 알차게 이용하기!</p>
         <h2>당진시 <em>보건소 및 지소</em></h2>
@@ -205,9 +227,33 @@
         <strong class="tabbn"><a href="#info3">보건진료소</a></strong>
 
         <div class="grap" id="info1"><!-- 보건소 info1 / 보건지소 info2 / 보건지료소 info3  -->
-          <div id="health_center">
+          <div>
             <div id="district_nm1" class="w_info" style="display:block;">
-                <strong><em>보건소</em>당진시보건소</strong>
+              <strong><em>보건소</em>당진시보건소</strong>
+              <div class="imgwrap"><img src="./images/img_info1.png" alt="당진시보건소 이미지"></div>
+              <ul>
+              <li><b>주소</b>충청남도 당진시 서부로 56</li>
+              <li><b>전화번호</b>1522-3113</li>
+              <li><b>운영시간</b>09:00 ~ 18:00</li>
+              </ul>
+              <a href="#" class="more">자세히보기</a>
+            </div>
+            <div class="map_img_area">
+              <div class="map_img">
+                <img src="./images/mapimg.png" alt="당진시 지도입니다." class="mapimg">
+                <a href="javascript:sltSpot(1);" id="mark_1" class="_marker a_01  on">
+                  <i></i>
+                  <em>당진시보건소</em>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grap" id="info2">
+          <div>
+            <div id="district_b_nm1" class="w_info" style="display:block;">
+                <strong><em>보건지소</em>합덕읍보건지소</strong>
                 <div class="imgwrap"><img src="./images/img_info1.png" alt="당진시보건소 이미지"></div>
                 <ul>
                   <li><b>주소</b>충청남도 당진시 서부로 56</li>
@@ -216,91 +262,151 @@
                 </ul>
                 <a href="#" class="more">자세히보기</a>
             </div>
-            
-            <div id="district_nm2" class="w_info"  style="display:none">
-            합덕읍
+            <div id="district_b_nm2" class="w_info">
+              <strong><em>보건지소</em>송악읍보건지소</strong>
+              <a href="#" class="more">자세히보기</a>
             </div>
-            
-            <div id="district_nm3" class="w_info"  style="display:none">
-            송악읍
+            <div id="district_b_nm3" class="w_info">
+              <strong><em>보건지소</em>고대면보건지소</strong>
+              <a href="#" class="more">자세히보기</a>
+            </div>
+            <div id="district_b_nm4" class="w_info">
+              <strong><em>보건지소</em>석문면보건지소</strong>
+              <a href="#" class="more">자세히보기</a>
+            </div>
+            <div id="district_b_nm5" class="w_info">
+              <strong><em>보건지소</em>대호지면보건지소</strong>
+              <a href="#" class="more">자세히보기</a>
+            </div>
+            <div id="district_b_nm6" class="w_info">
+              <strong><em>보건지소</em>정미면보건지소</strong>
+              <a href="#" class="more">자세히보기</a>
+            </div>
+            <div id="district_b_nm7" class="w_info">
+              <strong><em>보건지소</em>면천면보건지소</strong>
+              <a href="#" class="more">자세히보기</a>
+            </div>
+            <div id="district_b_nm8" class="w_info">
+              <strong><em>보건지소</em>순성면보건지소</strong>
+              <a href="#" class="more">자세히보기</a>
+            </div>
+            <div id="district_b_nm9" class="w_info">
+              <strong><em>보건지소</em>우강면보건지소</strong>
+              <a href="#" class="more">자세히보기</a>
+            </div>
+            <div id="district_b_nm10" class="w_info">
+              <strong><em>보건지소</em>신평면보건지소</strong>
+              <a href="#" class="more">자세히보기</a>
+            </div>
+            <div id="district_b_nm11" class="w_info">
+              <strong><em>보건지소</em>송산면보건지소</strong>
+              <a href="#" class="more">자세히보기</a>
             </div>
 
-            <script>
-              function sltSpot(num){
-                for(spot_i=1 ; spot_i <= 18 ; spot_i++){
-                  if(spot_i == num){
-                    document.getElementById("district_nm"+num).style.display = "block";
-                    document.getElementById("mark_"+num).classList.add('on');
-                  } else {
-                    document.getElementById("district_nm"+spot_i).style.display = "none";
-                    document.getElementById("mark_"+spot_i).classList.remove('on');
-                  }
-                }
-              }
-            </script>
             <div class="map_img_area">
               <div class="map_img">
                 <img src="./images/mapimg.png" alt="당진시 지도입니다." class="mapimg">
-                <a href="javascript:sltSpot(2);" id="mark_2" class="_marker _01">
-                  <em>합덕읍</em> 
-                  <span class="weather_temp">당진시보건소</span>
+                <a href="javascript:hc_SpotB(1);" id="mark_b1" class="_marker b_01 on">
+                  <i></i>
+                  <em>합덕읍보건지소</em> 
                 </a>
-                <a href="javascript:sltSpot(3);" id="mark_3" class="_marker _02">
-                  <em>송악읍</em> 
-                  <span class="weather_temp">당진시보건소</span>
+                <a href="javascript:hc_SpotB(2);" id="mark_b2" class="_marker b_02">
+                  <i></i>
+                  <em>송악읍보건지소</em> 
                 </a>
-                <a href="javascript:sltSpot(4);" id="mark_4" class="_marker _03">
-                  <em>고대면</em> 
-                  <span class="weather_temp">당진시보건소</span>
+                <a href="javascript:hc_SpotB(3);" id="mark_b3" class="_marker b_03">
+                  <i></i>
+                  <em>고대면보건지소</em> 
                 </a>
-                <a href="javascript:sltSpot(5);" id="mark_5" class="_marker _04">
-                  <em>석문면</em> 
-                  <span class="weather_temp">당진시보건소</span>
+                <a href="javascript:hc_SpotB(4);" id="mark_b4" class="_marker b_04">
+                  <i></i>
+                  <em>석문면보건지소</em> 
                 </a>
-                <a href="javascript:sltSpot(6);" id="mark_6" class="_marker _05">
-                  <em>대호지면</em> 
-                  <span class="weather_temp">당진시보건소</span>
+                <a href="javascript:hc_SpotB(5);" id="mark_b5" class="_marker b_05">
+                  <i></i>
+                  <em>대호지면보건지소</em> 
                 </a>
-                <a href="javascript:sltSpot(7);" id="mark_7" class="_marker _06">
-                  <em>정미면</em> 
-                  <span class="weather_temp">당진시보건소</span>
+                <a href="javascript:hc_SpotB(6);" id="mark_b6" class="_marker b_06">
+                  <i></i>
+                  <em>정미면보건지소</em> 
                 </a>
-                <a href="javascript:sltSpot(8);" id="mark_8" class="_marker _07">
-                  <em>면천면</em> 
-                  <span class="weather_temp">당진시보건소</span>
+                <a href="javascript:hc_SpotB(7);" id="mark_b7" class="_marker b_07">
+                  <i></i>
+                  <em>면천면보건지소</em> 
                 </a>
-                <a href="javascript:sltSpot(9);" id="mark_9" class="_marker _08">
-                  <em>순성면</em> 
-                  <span class="weather_temp">당진시보건소</span>
+                <a href="javascript:hc_SpotB(8);" id="mark_b8" class="_marker b_08">
+                  <i></i>
+                  <em>순성면보건지소</em> 
                 </a>
-                <a href="javascript:sltSpot(10);" id="mark_10" class="_marker _09">
-                  <em>우강면</em> 
-                  <span class="weather_temp">당진시보건소</span>
+                <a href="javascript:hc_SpotB(9);" id="mark_b9" class="_marker b_09">
+                  <i></i>
+                  <em>우강면보건지소</em> 
                 </a>
-                <a href="javascript:sltSpot(11);" id="mark_11" class="_marker _10">
-                  <em>신평면</em> 
-                  <span class="weather_temp">당진시보건소</span>
+                <a href="javascript:hc_SpotB(10);" id="mark_b10" class="_marker b_10">
+                  <i></i>
+                  <em>신평면보건지소</em> 
                 </a>
-                <a href="javascript:sltSpot(12);" id="mark_12" class="_marker _11">
-                  <em>송산면</em> 
-                  <span class="weather_temp">당진시보건소</span>
-                </a>
-                <a href="javascript:sltSpot(13);" id="mark_13" class="_marker _12">
-                  <em>당진2동</em> 
-                  <span class="weather_temp">당진시보건소</span>
-                </a>
-                <a href="javascript:sltSpot(14);" id="mark_14" class="_marker _13">
-                  <em>당진3동</em> 
-                  <span class="weather_temp">당진시보건소</span>
-                </a>
-                <a href="javascript:sltSpot(1);" id="mark_1" class="_marker _14 on">
-                  <em>당진1동</em> 
-                  <span class="weather_temp">당진시보건소</span>
+                <a href="javascript:hc_SpotB(11);" id="mark_b11" class="_marker b_11">
+                  <i></i>
+                  <em>송산면보건지소</em> 
                 </a>
               </div>
             </div>
           </div>
-      </div>
+        </div>
+
+        <div class="grap" id="info3">
+          <div>
+            <div id="district_c_nm1" class="w_info" style="display:block;">
+                <strong><em>보건진료소</em>궁리보건진료소</strong>
+                <div class="imgwrap"><img src="./images/img_info1.png" alt="당진시보건소 이미지"></div>
+                <ul>
+                  <li><b>주소</b>충청남도 당진시 서부로 56</li>
+                  <li><b>전화번호</b>1522-3113</li>
+                  <li><b>운영시간</b>09:00 ~ 18:00</li>
+                </ul>
+                <a href="#" class="more">자세히보기</a>
+            </div>
+            <div id="district_c_nm2" class="w_info">
+              <strong><em>보건진료소</em>본당 보건진료소</strong>
+              <div class="imgwrap"><img src="./images/img_info1.png" alt="당진시보건소 이미지"></div>
+              <ul>
+                <li><b>주소</b>충청남도 당진시 서부로 56</li>
+                <li><b>전화번호</b>1522-3113</li>
+                <li><b>운영시간</b>09:00 ~ 18:00</li>
+              </ul>
+              <a href="#" class="more">자세히보기</a>
+            </div>
+            <div id="district_c_nm3" class="w_info">
+              <strong><em>보건진료소</em>중흥 보건진료소</strong>
+              <div class="imgwrap"><img src="./images/img_info1.png" alt="당진시보건소 이미지"></div>
+              <ul>
+                <li><b>주소</b>충청남도 당진시 서부로 56</li>
+                <li><b>전화번호</b>1522-3113</li>
+                <li><b>운영시간</b>09:00 ~ 18:00</li>
+              </ul>
+              <a href="#" class="more">자세히보기</a>
+            </div>
+
+            <div class="map_img_area">
+              <div class="map_img">
+                <img src="./images/mapimg.png" alt="당진시 지도입니다." class="mapimg">
+                <a href="javascript:hc_SpotC(1);" id="mark_c1" class="_marker c_01 on">
+                  <i></i>
+                  <em>궁리 보건진료소</em> 
+                </a>
+                <a href="javascript:hc_SpotC(2);" id="mark_c2" class="_marker c_02">
+                  <i></i>
+                  <em>본당 보건진료소</em> 
+                </a>
+                <a href="javascript:hc_SpotC(3);" id="mark_c3" class="_marker c_03">
+                  <i></i>
+                  <em>중흥 보건진료소</em> 
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       <script>
         $(document).ready(function(){
           var btn = "#infowrap strong > a";
@@ -312,7 +418,7 @@
   </section>
 
   <section id="section5">
-    <div class="layout">
+    <div class="layout" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="400">
       <div class="wrap">
       <div class="business">
         <div class="tit">
@@ -394,7 +500,7 @@
     </div>
   </section>
 
-  <section id="section6" class="layout">
+  <section id="section6" class="layout" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="400">
     <div class="wrap">
       <div class="tit">
         <h2>관내<em>의료기관</em></h2>
@@ -490,6 +596,32 @@ $("#favMenu > .click_open").on("click",function(){
 $("#favMenu > .click_close").on("click",function(){
     $(this).parents("#favMenu").removeClass("on");
 });
+
+//  보건지소
+function hc_SpotB(num){
+  for(spot_i=1 ; spot_i <= 18 ; spot_i++){
+    if(spot_i == num){
+      document.getElementById("district_b_nm"+num).style.display = "block";
+      document.getElementById("mark_b"+num).classList.add('on');
+    } else {
+      document.getElementById("district_b_nm"+spot_i).style.display = "none";
+      document.getElementById("mark_b"+spot_i).classList.remove('on');
+    }
+  }
+}
+// 보건진료소
+function hc_SpotC(num){
+  for(spot_i=1 ; spot_i <= 18 ; spot_i++){
+    if(spot_i == num){
+      document.getElementById("district_c_nm"+num).style.display = "block";
+      document.getElementById("mark_c"+num).classList.add('on');
+    } else {
+      document.getElementById("district_c_nm"+spot_i).style.display = "none";
+      document.getElementById("mark_c"+spot_i).classList.remove('on');
+    }
+  }
+}
+AOS.init();
 </script>
 </body>
 </html>

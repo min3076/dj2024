@@ -13,10 +13,13 @@
         <link rel="stylesheet" href="./css/common.css">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/layout.css">
+        <link rel="stylesheet" href="./css/aos.css">
 
         <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="./js/jquery-latest.min.js"></script>
         <script type="text/javascript" src="./js/slick.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
+        <script type="text/javascript" src="./js/aos.js"></script>
         <script src="https://www.dangjin.go.kr/js/common/script.js"></script><!-- common 탭 사용-->
     </head>
 <body>
@@ -29,64 +32,83 @@
 
 <main id="container">
   <section id="section1">
-      <h2><span>필요한 복지서비스를 한눈에!</span>당진시민의 <em class="c_point">복지도우미</em></h2>
-      <!-- slick -->
-      <div class="post-wrapper">
-        <a href="#" class="item1">
-            <b>영유아</b>
+    <div class="tit">
+      <span data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic">필요한 복지서비스를 한눈에!</span>
+      <h2 data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="200">당진시민의 <em class="c_point">복지도우미</em></h2>
+    </div>
+    <!-- slick -->
+
+    <!-- slick -->
+    <div id="mv_news" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic">
+      <div class="slide_wrap">
+          <div class="slide">
+            <a href="#" class="item1">
+              <b>영유아</b>
+              <ul>
+                <li>디딤씨앗통장(CDA)</li>
+                <li>아동급식지원</li>
+                <li>지역아동센터 운영</li>
+                <li>청소년보호사업</li>
+                <li>드림스타트</li>
+              </ul>
+          </a>
+          <a href="#" class="item2">
+              <b>아동·청소년</b>
+              <ul>
+                <li>디딤씨앗통장(CDA)</li>
+                <li>아동급식지원</li>
+                <li>지역아동센터 운영</li>
+                <li>청소년보호사업</li>
+                <li>드림스타트</li>
+              </ul>
+          </a>
+          <a href="#" class="item3">
+            <b>여성·가족</b>
             <ul>
-              <li>디딤씨앗통장(CDA)</li>
-              <li>아동급식지원</li>
-              <li>지역아동센터 운영</li>
-              <li>청소년보호사업</li>
-              <li>드림스타트</li>
+              <li>아이행복카드</li>
+              <li>보육시설현황</li>
+              <li>보육료지원</li>
             </ul>
-        </a>
-        <a href="#" class="item2">
-            <b>아동·청소년</b>
-            <ul>
-              <li>디딤씨앗통장(CDA)</li>
-              <li>아동급식지원</li>
-              <li>지역아동센터 운영</li>
-              <li>청소년보호사업</li>
-              <li>드림스타트</li>
-            </ul>
-        </a>
-        <a href="#" class="item3">
-          <b>여성·가족</b>
-          <ul>
-            <li>아이행복카드</li>
-            <li>보육시설현황</li>
-            <li>보육료지원</li>
-          </ul>
-        </a>
-        <a href="#" class="item4">
-            <b>어르신</b>
-            <ul>
-              <li>생활지원안내</li>
-              <li>노인일자리 안내</li>
-              <li>장묘(장사)안내</li>
-              <li>노인장기요양보험제도</li>
-            </ul>
-        </a>
-        <a href="#" class="item5">
-            <b>장애인</b>
-            <ul>
-              <li>장애인 등록안내</li>
-              <li>장애인 지원사업</li>
-              <li>장애인 복지서비스</li>
-            </ul>
-        </a>
+          </a>
+          <a href="#" class="item4">
+              <b>어르신</b>
+              <ul>
+                <li>생활지원안내</li>
+                <li>노인일자리 안내</li>
+                <li>장묘(장사)안내</li>
+                <li>노인장기요양보험제도</li>
+              </ul>
+          </a>
+          <a href="#" class="item5">
+              <b>장애인</b>
+              <ul>
+                <li>장애인 등록안내</li>
+                <li>장애인 지원사업</li>
+                <li>장애인 복지서비스</li>
+              </ul>
+          </a>
+          </div>
+          <div class="control">
+            <div class="total">
+              <span class="current">01</span> 
+              <span class="line"><em>/</em></span>
+              <span class="count">00</span>
+            </div>
+            <div class="progress">
+                <span></span>
+            </div>
+            <button type="button" class="button prev" data-control="prev"><span>팝업존 슬라이드 이전</span></button>
+            <button type="button" class="button next" data-control="next"><span>팝업존 슬라이드 다음</span></button>
+            <button type="button" class="button stop" data-control="stop"><span>팝업존 슬라이드 정지</span></button>
+            <button type="button" class="button play" data-control="play"><span>팝업존 슬라이드 재생</span></button>
+          </div>
       </div>
-      <div class="control">
-        <button type="button" class="button ctrl bn_stop" data-control="stop">팝업 정지</button>
-        <button type="button" style="display: none" class="button ctrl bn_play" data-control="play">팝업 재생</button>
-      </div>	
-      <div class="numcount sPage1"><span class="now">01</span><span>05</span></div>
-      <!-- //slick -->
+    </div>
+    <!-- //slick -->
+
   </section>
 
-  <section id="section2">
+  <section id="section2" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="200">
     <div class="layout">
       <div class="tit">
         <h2>복지<em class="c_point">검색</em></h2>
@@ -228,16 +250,17 @@
               </li>
           </ul>
         </div>
-        <div class="btnwrap">
+        <div class="create_item btnwrap">
           <a href="#" class="bn reset">선택초기화</a>
           <a href="#" class="bn search">선택결과보기</a>
         </div>
-        <a href="#" class="btn_close">접기</a>
+        <button href="#"  class="allbn click_open"><span>펼치기</span></button>
+        <button class="allbn click_close"><span>접기</span></button>
       </div>
     </div>
   </section> 
 
-  <section id="section3">
+  <section id="section3" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="400">
     <div class="layout">
       <div class="mborad">
         <h2>복지<em>소식</em></h2>
@@ -293,14 +316,15 @@
       </div>
     </div>
   </section>
+  
   <section id="section4">
     <div class="layout" id="welfare_fac">
-      <div class="tit">
+      <div class="tit" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="800">
       <h2><em>당진 복지광장</em>복지시설안내</h2>
       <p>당진시민이 언제든 이용하실 수 있도록
         <span>복지시설을 운영하고 있습니다.</span></p>
       </div>
-      <div class="tab">
+      <div class="tab"  data-aos="fade-right" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="1000">
         <strong class="tabbn"><a href="#fac1" class="ov">아동, 청소년</a></strong>
         <div class="grap" id="fac1">
         <!-- slick -->
@@ -554,13 +578,13 @@
   </section>
 
   <section id="section5">
-    <div class="layout">
+    <div class="layout" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic">
       <div class="tit">
-        <span>당진시의 빈츰없는 지원</span>
-        <h2>당진시 <em>복지 중점사업</em>을 소개합니다</h2>
+        <span  data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="200">당진시의 빈츰없는 지원</span>
+        <h2 data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="400">당진시 <em>복지 중점사업</em>을 소개합니다</h2>
       </div>
       <ul>
-        <li class="item">
+        <li class="item" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="600">
           <strong>임신출산육아 지원시책</strong>
           <p>임신을 준비하는 부부부터 임산부, 출산, 육아까지 당진시 도담도담 행복한 우리가족이 지원합니다.
             당진시에서 배포하고 있는 홍보 안내물에서 지원 내용을 자세히 확인하실 수 있습니다.</p>
@@ -569,7 +593,7 @@
             <li><a href="#" class="bn_down">지원시책 다운로드</a></li>
           </ul>
         </li>
-        <li class="item">
+        <li class="item" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="700">
           <strong>바우처 사업</strong>
           <p>바우처는 어떤 상품을 구매할 수 있는 증서 의미. 사회서비스 바우처 제도는 노인, 장애인, 산모, 아동 등 사회서비스를 필요로 하는 사람에게 일종의 이용권을 발급하여 서비스를 받을 수 있도록 하는 제도. 전자바우처는 사회서비스를 편리하게 이용할 수 있도록 현금카드 형태로 지급되며, 서비스의 신청에서 이용과 비용지급, 정산 등 전 과정이 전자시스템으로 처리</p>
           <ul>
@@ -579,7 +603,7 @@
             <li><a href="#" class="bn_lnk">지역 사회서비스 투자</a></li>
           </ul>
         </li>
-        <li class="item">
+        <li class="item" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="800">
           <strong>장묘 사업</strong>
           <p>매장및묘지등에관한법률이 장사등에관한법률로 전문개정(2001.1.13 부터시행). 개인묘지, 화장장, 납골시설 설치를 허가제에서 신고제로 전환. 묘지의 설치면적을 최소화 하고 집단화된 묘지의 1 기당 점유면적을 10 ㎡이하로 제한. 매장허가기간을 30년으로 제한하고 허가기간 종료 후 납골을 의무화. 30년씩 1회연장(총60년 매장가능). 타인의 토지에 승낙없이 설치된 분묘의 연고권 불인정</p>
           <ul>
@@ -593,7 +617,7 @@
     </div>
   </section>
 
-  <section id="section6" >
+  <section id="section6"  data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="200">
     <h2 class="skip">바로가기 링크모음</h2>
     <div class="layout">
       <a href="#" class="boxlnk">
@@ -704,6 +728,15 @@ $("#section4 .grap").each(function(index, element){
       };
     });
 });
+
+$(".create_box > .click_open").on("click",function(){
+    $(this).parent().addClass("on");
+});
+$(".create_box > .click_close").on("click",function(){
+    $(this).parents(".create_box").removeClass("on");
+});
+
+AOS.init();
 </script>
 
 </body>

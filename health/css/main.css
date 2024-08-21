@@ -8,11 +8,16 @@ section h2 em{color:#104C9C}
 
 main::before{content:"";position:absolute;top:46%;left:50%;transform:translateX(-50%);display:block;width:100%;height:2000px;background:url(../images/sc4_bg.png) no-repeat}
 
+section .more:after{transform:rotate(0deg);transition:transform .4s ease-in-out;}
+section .more:hover::after,
+section .more:active::after{transform: rotate(360deg);}
 
 /* section1  */
 #section1{position:relative;padding:225px 0 40px;}
-#section1::after{content:'';position: absolute;right: 50%;top: 0;transform: translateX(-170px);display:block;width: 1200px;height:905px;border-radius:0 0 200px 0;background: linear-gradient(180deg, rgba(55,121,220,1) 0%, rgba(52,140,225,1) 63%, rgba(49,166,232,1) 100%);}
-#section1 .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;}
+#section1::after{content:'';position: absolute;right: 50%;top: 0;transform: translateX(-170px);display:block;width: 1200px;height:905px;border-radius:0 0 200px 0;background: url(../images/bgimg.png) no-repeat 100%;background-blend-mode: multiply;opacity:.3}
+#section1::before{content:'';position: absolute;right: 50%;top: 0;transform: translateX(-170px);display:block;width: 1200px;height:905px;border-radius:0 0 200px 0;background: linear-gradient(180deg, rgba(55,121,220,1) 0%, rgba(52,140,225,1) 63%, rgba(49,166,232,1) 100%);}
+
+#section1 .wrap{position:relative;z-index:10;display:flex;justify-content:space-between;flex-wrap:wrap;}
 
 #section1 h2{margin:0;text-align:left;}
 #section1 .info{position:relative;z-index:10;}
@@ -43,31 +48,34 @@ main::before{content:"";position:absolute;top:46%;left:50%;transform:translateX(
 #section1 #popupzone{display:flex;flex-direction:column;gap:12px;width:859px;margin-top:-40px;}
 #section1 #popupzone h2{display:flex;align-items:center;gap:8px;font-size:22px;}
 #section1 #popupzone h2::before{content:'';display:block;width:45px;height:45px;background:url(../images/ico_pzone_tit.svg) no-repeat;}
-#section1 #popupzone .slick-arrow{top:-68px;right: 0;width:65px;height:65px;background:transparent;}
-#section1 #popupzone .slick-prev:after, 
-#section1 #popupzone .slick-next:after{display:none}
-#section1 #popupzone .slick-prev:before, 
-#section1 #popupzone .slick-next:before{content:'';position:absolute;width:50px;height:50px;background-repeat:no-repeat;background-position:50%}
-#section1 #popupzone .slick-arrow.slick-prev{margin-top:0;transform: rotate(0) translateX(-30px);left: auto;}
-#section1 #popupzone .slick-arrow.slick-next{transform: translateX(24px);}
-#section1 #popupzone .slick-arrow.slick-prev:before{background-image:url(../images/ico_arr_l.svg)}
-#section1 #popupzone .slick-arrow.slick-next:before{background-image:url(../images/ico_arr_r.svg)}
 
-#section1 #popupzone .control {position:absolute;right: 109px;top:-32px;transform: translateX(78px);z-index:100;}
-#section1 #popupzone .control .ctrl{font-size:0;}
-#section1 #popupzone .bn_stop {display:inline-block;width:8px;height:10px;border-left:3px solid #000;border-right:3px solid #000;}
-#section1 #popupzone .bn_play {width:auto;height:auto;border-left:7px solid #000;border-right:7px solid transparent;border-top:7px solid transparent;border-bottom:7px solid transparent;}
-#section1 #popupzone .numcount {display:flex;align-items:center;gap:8px;position:absolute;right: 62px;top:-26px;transform:translateX(-50%);}
-#section1 #popupzone .numcount span{color:#9FACB9;font-size:15px;font-weight:bold;font-family: var(--f_gmarket);}
-#section1 #popupzone .numcount span.now{display:flex;align-items:center;gap:8px;color:#515151}
-#section1 #popupzone .numcount span.now::after{content:'';display:block;width:3px;height:3px;border-radius:2px;background:#9FACB9}
+#section1 .control{position:absolute;top:-110px;right:0;display: flex;align-items: center;justify-content: flex-start;width:300px;margin:100px auto 0 }
+#section1 .control button{display: block;width:65px;height:65px;background-repeat: no-repeat;background-position: center;}
+#section1 .control button span{font-size: 0;}
+#section1 .slick-arrow{position:absolute;top:0;width:25px;height:25px;}
+#section1 .control button.prev{left:50%;transform:translateX(-10px);background-image:url(../images/ico_arr_l.svg)}
+#section1 .control button.next{right:50%;transform:translateX(130px);background-image:url(../images/ico_arr_r.svg)}
+#section1 .control button.play{background-image: url("data:image/svg+xml,%3Csvg width='15' height='17' viewBox='0 0 15 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 8.5L0.749999 16.7272L0.75 0.272758L15 8.5Z' fill='black'/%3E%3C/svg%3E%0A");display: none;background-color:transparent}
+#section1 .control button.stop{background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='1.5' y1='6.99382e-08' x2='1.5' y2='15' stroke='black' stroke-width='3'/%3E%3Cline x1='13.5' y1='6.99382e-08' x2='13.5' y2='15' stroke='black' stroke-width='3'/%3E%3C/svg%3E%0A");background-color:transparent}
+
+#section1 .control .progress{position: relative;width: calc(100% - 225px);height: 2px;margin: 0 34px;background: #D9D9D9;}
+#section1 .control .progress span{display: block;position: absolute;top:0;left:0;width: 0;height:100%; background: #1873DE;}
+
+.total span{font-size: 15px;color: #959595;font-family:var(--f_gmarket);}
+.total span.current{color: #355F9B;font-weight: 700;}
+.total span.line{margin-right: 3px;}
+
+
+
+
+
 
 
 
 
 /* 자주찾는서비스 */
 #section2{position:relative;z-index:10;}
-#section2 p{font-size:0;height:29px;margin-bottom:30px;background:url(../images/sc2_txt.png) no-repeat 100% 0}
+#section2 p{font-size:0;height:29px;margin-bottom:30px;background:url(../images/sc2_txt.svg) no-repeat 100% 0}
 #section2 #favMenu{position:relative;display:flex;flex-direction:column;gap:20px}
 #section2 #favMenu div{display:flex;gap:52px;}
 #section2 #favMenu div:first-child{padding-right:195px;}
@@ -137,7 +145,7 @@ main::before{content:"";position:absolute;top:46%;left:50%;transform:translateX(
 }
 
 
-/* section3 사서추천도서 */
+/* section3 */
 #section3{position:relative;padding:150px 0 338px;}
 #section3 h2{position:absolute;left:0;top:4px;}
 #section3 .tab *{font-family:var(--f_gmarket);font-weight:400}
@@ -147,7 +155,7 @@ main::before{content:"";position:absolute;top:46%;left:50%;transform:translateX(
 #section3 .tab .tabbn a{position:relative;display:flex;align-items:center;justify-content:center;gap:18px;padding:12px 0;border-radius:30px;font-family:var(--f_gmarket);}
 #section3 .tab .tabbn a.ov{padding:12px 40px;color:#fff;font-weight:bold;background:#3779DC;}
 #section3 .tab .tabbn a.ov::before{display:none;}
-#section3 .tab .tabbn a.ov::after{content:'';position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);display:block;border:8px solid transparent;border-top-color: #387ADF;}
+#section3 .tab .tabbn a.ov::after{content:'';position:absolute;left:50%;bottom:-15px;transform:translateX(-50%);display:block;border:8px solid transparent;border-top-color: #387ADF;}
 
 #section3 .tab .grap{position:absolute;top:80px;}
 #section3 .tab .grap ul{display:flex;align-items: center;justify-content: space-between;gap:20px;}
@@ -165,16 +173,20 @@ main::before{content:"";position:absolute;top:46%;left:50%;transform:translateX(
   -webkit-line-clamp:2;}
 #section3 .tab .grap a .text{font-size:16px;color:#666}
 #section3 .tab .grap a .date{color:#104C9C;font-size:17px;}
-#section3 .more{position:absolute;top:0;right:0;display:flex;align-items:center;gap:10px;font-family:var(--f_gmarket);color:#757575;}
-#section3 .more::after{content:'';display:block;width:60px;height:60px;border-radius:20px 20px 20px 8px;background:#495057 url(../images/ico_more.svg) no-repeat 50% 50%}
-
+#section3 .more{position:absolute;top:0;right:0;display:flex;align-items:center;gap:30px;padding-right:20px;font-family:var(--f_gmarket);color:#757575;}
+#section3 .more::before{content:'';position:absolute;right:0;display:block;width:60px;height:60px;border-radius:20px 20px 20px 8px;background:#495057}
+#section3 .more::after{content:'';display:block;width:24px;height:24px;background:url(../images/ico_more.svg) no-repeat 50% 50%}
+#section3 .more:hover::before,
+#section3 .more:active::before{background-color:#1873DE;}
 
 
 /* sc4 당진시 보건소 및 지소 */
 #section4 {position:relative;padding:150px 0;min-height:780px;}
+#section4 .bgtx{opacity:0;position:absolute;left:50%;top:600px;transform:translateX(50%);display:block;width:1931px;height:152px;background:url(../images/sc4_bg_txt.svg) no-repeat;transition:all 1s 3s}
+#section4.aos-animate .bgtx{opacity:1;transform:translate(-50%)}
 #section4 .layout{z-index:10;position:relative}
 #section4 .tit{position:absolute;left:0;top:4px;}
-#section4 .tit p{width:345px;height:31px;font-size:0;background:url(../images/sc4_tit.png) no-repeat}
+#section4 .tit p{width:345px;height:31px;font-size:0;background:url(../images/sc4_tit.svg) no-repeat}
 #section4 .tit h2{margin:8px 0 0;}
 #section4 .tab *{font-family:var(--f_gmarket);font-weight:400}
 #section4 .tab{display:flex;align-items:center;gap:20px;padding-top:30px;}
@@ -189,7 +201,7 @@ main::before{content:"";position:absolute;top:46%;left:50%;transform:translateX(
 
 #section4 .grap{position:absolute;top:120px;width:100%;}
 #section4 #health_center{position:relative;width:100%;}
-#section4 #health_center .w_info{position:relative;width:904px;padding:80px 80px 80px 340px;border-radius:120px 40px 10px 40px;border:1px solid #EFEFEF;box-shadow:5px 5px 15px 0 rgba(0,0,0,.05);background:#fff;}
+#section4 #health_center .w_info{display:none;position:relative;width:904px;padding:80px 80px 80px 340px;border-radius:120px 40px 10px 40px;border:1px solid #EFEFEF;box-shadow:5px 5px 15px 0 rgba(0,0,0,.05);background:#fff;}
 #section4 #health_center .w_info strong{display:flex;align-items:center;gap:6px;margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #D7D7D7;font-size:24px;}
 #section4 #health_center .w_info strong em{font-weight:bold;color:#3779DC;}
 #section4 #health_center .w_info .imgwrap{position:absolute;left:80px;top:80px;width:197px;height:197px;padding:4px;border:1px solid #D7D7D7;border-radius:100px;overflow:hidden;background:#fff}
@@ -202,37 +214,48 @@ main::before{content:"";position:absolute;top:46%;left:50%;transform:translateX(
 #section4 #health_center .w_info ul li:nth-of-type(2) b::before{background-image:url(../images/ico_hc2.svg)}
 #section4 #health_center .w_info ul li:nth-of-type(3) b::before{background-image:url(../images/ico_hc3.svg)}
 #section4 #health_center .w_info ul li b::after{position:absolute;right:0;width:1px;height:12px;background:#CACACA}
-#section4 .more{position:absolute;bottom:0;right:0;display:flex;align-items:center;font-size:0;}
-#section4 .more::after{content:'';display:block;width:60px;height:60px;border-radius:20px 20px 8px 20px;background:#495057 url(../images/ico_more.svg) no-repeat 50% 50%}
+#section4 .more{position:absolute;bottom:0;right:0;display:flex;align-items:center;justify-content:center;font-size:0;width:60px;height:60px;border-radius:20px 20px 8px 20px;background:#495057}
+#section4 .more::after{content:'';display:block;width:24px;height:24px;background:url(../images/ico_more.svg) no-repeat 50% 50%}
+#section4 .more:hover,
+#section4 .more:active{background-color:#1873DE;}
 
 #section4 #health_center .map_img_area {position:absolute;top:-175px;right:-43px;}
 #section4 #health_center .map_img {position:relative;width:722px;height:712px;}
-#section4 #health_center .map_img .mapimg {display:block;position:relative;max-width:100%;font-size:0;}
 .map_img a._marker {transition:all .25s ease-out;position:absolute;}
-.map_img a._marker em{padding:4px 12px;font-size:16px;background-color:#ECF2F8;border-radius:20px }
-.map_img a._marker span{position:absolute;}
-.map_img a._marker span i{position:absolute;font-size:0;line-height:0;}
-.map_img a._marker .weather_temp{bottom:-24px;left:50%;transform:translateX(-50%);font-weight:bold}
-.map_img a._marker .weather_img{width:24px;height:24px;top:-28px;left:50%;transform:translateX(-50%)}
+.map_img a._marker em{display:none;position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:170px;padding:10px 0;font-size:18px;text-align:center;background-color:#fff;border:3px solid #1E4298;border-radius:30px}
+.map_img a._marker em::after{content:'';position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);display:block;width:24px;height:19px;background:url(../images/ico_info_bg.png) no-repeat}
 
-.map_img ._01 {top:589px;left:525px;}/* 합덕읍 */
-.map_img ._02 {top:259px;left:486px;}/* 송악읍 */
-.map_img ._03 {top:270px;left:195px;}/* 고대면 */
-.map_img ._04 {top:102px;left:104px;}/* 석문면 */
-.map_img ._05 {top:326px;left:70px;}/* 대호지면 */
-.map_img ._06 {top:416px;left:170px;}/* 정미면 */
-.map_img ._07 {top:500px;left:314px;}/* 면천면 */
-.map_img ._08 {top:470px;left:417px;}/* 순성면 */
-.map_img ._09 {top:490px;left:562px;}/* 우강면 */
-.map_img ._10 {top:390px;left:545px;}/* 신평면 */
-.map_img ._11 {top:230px;left:345px;}/* 송산면 */
-.map_img ._12 {top:415px;left:265px;}/* 당진2동 */
-.map_img ._13 {top:325px;left:345px;}/* 당진3동 */
-.map_img ._14 {top:376px;left:315px;}/* 당진1동 */
-.map_img a._marker:hover em,
-.map_img a._marker.on em{background-color:#685fc4;}
-.map_img a._marker:hover em,
-.map_img a._marker.on em{color:#fff;}
+.map_img a._marker i{display:block;position:absolute;bottom:-42px;left:50%;transform:translateX(-50%);display:block;width:19px;height:23px;background:url(../images/ico_point.png) no-repeat;}
+
+
+.map_img a._marker.on em{display:block; }
+
+.map_img a._marker.on i{bottom:-42px;width:18px;height:23px;background-image:url(../images/ico_point_ov.png)}
+
+
+
+.map_img .a_01 {top:259px;left: 209px;}/* 당진시보건소 */
+
+/* 보건지소 */
+.map_img .b_01 {top: 489px;left: 495px;}/* 합덕읍 */
+.map_img .b_02 {top: 160px;left:486px;}/* 송악읍 */
+.map_img .b_03 {top: 150px;left:195px;}/* 고대면 */
+.map_img .b_04 {top: 32px;left: 124px;}/* 석문면 */
+.map_img .b_05 {top: 206px;left: 150px;}/* 대호지면 */
+.map_img .b_06 {top: 306px;left: 210px;}/* 정미면 */
+.map_img .b_07 {top: 380px;left:314px;}/* 면천면 */
+.map_img .b_08 {top: 350px;left:417px;}/* 순성면 */
+.map_img .b_09 {top: 351px;left:562px;}/* 우강면 */
+.map_img .b_10 {top: 260px;left:545px;}/* 신평면 */
+.map_img .b_11 {top: 140px;left:345px;}/* 송산면 */
+
+/* 보건진료소 */
+.map_img .c_01 {top:389px;left:525px;}/* 궁리 */
+.map_img .c_02 {top:259px;left:486px;}/* 본당 */
+.map_img .c_03 {top:270px;left:195px;}/* 중흥 */
+
+
+
 
 
 /* sc5 보건사업안내 예방접종안내 */
@@ -326,3 +349,6 @@ main::before{content:"";position:absolute;top:46%;left:50%;transform:translateX(
 #section7 .control .ctrl{font-size:0;}
 #section7 .bn_stop {display:inline-block;width:8px;height:10px;border-left:3px solid #000;border-right:3px solid #000;}
 #section7 .bn_play {width:auto;height:auto;border-left:7px solid #000;border-right:7px solid transparent;border-top:7px solid transparent;border-bottom:7px solid transparent;}
+
+
+
