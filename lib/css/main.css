@@ -7,13 +7,13 @@ section h2 *{font-family:var(--f_gmarket);font-size:42px;}
 section h2 em{color:#4D8DE7}
 section h2{text-align:center;}
 
-#section1{margin-bottom:130px;padding:215px 0 650px;background:url(../images/sc1_bg.png) no-repeat 50% 0;background-size:cover}
+#section1{margin-bottom:130px;padding:185px 0 650px;background:url(../images/sc1_bg.png) no-repeat 50% 0;background-size:cover}
 #section1 .tit span{display:block;height:40px;margin-bottom:24px;font-size:0;background:url(../images/sc1_tit.svg) no-repeat 50% 0;}
 #section1 .tit h2{margin:0;width:100%;margin-bottom:86px;font-size:52px;font-family:var(--f_gmarket);text-align:center;}
 #section1 .tit h2 em{font-size:52px;}
 #section1 .slide_wrap .slick-list{margin-left:-16px;}
 #section1 .slide_wrap .slick-slide{width:512px;margin:0 16px;}
-#section1 .slide_wrap a{position:relative;display:block;min-height:360px;padding:0 80px 80px;border-radius:70px;overflow:hidden;color:#444;background:#fff}
+#section1 .slide_wrap a{position:relative;display:block;min-height:320px;padding:0 80px 80px;border-radius:70px;overflow:hidden;color:#444;background:#fff}
 #section1 .slide_wrap a *{display:block;text-align:center;}
 #section1 .slide_wrap a b{display:inline-block;text-align:center;padding:21px 47px 27px;border-radius:0 0 30px 30px;font-size:24px;font-weight:bold;font-family:var(--f_gmarket);color:#1CA2A3;background:#ECF9F9;}
 #section1 .slide_wrap a strong{display:block;margin:24px 0;font-size:20px;line-height:1.6;font-weight:bold;font-family:var(--f_gmarket);
@@ -37,7 +37,7 @@ section h2{text-align:center;}
 #section1 .slide_wrap a ul li{display:flex;align-items:center;gap:10px;font-size:20px;}
 #section1 .slide_wrap a ul li::before{content:'';display:block;width:4px;height:4px;border:2px solid rgba(255,255,255,.5);border-radius:6px;}
 
-#section1 .control{display:flex;align-items:center;justify-content:flex-start;width:300px;margin:80px auto 0 }
+#section1 .control{display:flex;align-items:center;justify-content:flex-start;width:300px;margin:60px auto 0 }
 #section1 .control button{display:block;width:65px;height:65px;background-repeat:no-repeat;background-position:center;background-color:#fff;}
 #section1 .control button span{font-size:0;}
 #section1 .slick-arrow{position:absolute;top:170px;width:65px;height:65px;border-radius:100px;overflow:hidden;box-shadow:3px 3px 15px 0 rgba(0,0,0,.15);background:#fff;}
