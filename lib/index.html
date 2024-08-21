@@ -505,28 +505,6 @@
 </div>
 
 <script type="text/javascript">
-$('#section1 .post-wrapper').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  variableWidth: true,
-  centerMode: true,
-  centerPadding: '32px',
-});
-$('#section1 .post-wrapper').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){ 
-  var i = (currentSlide ? currentSlide : 0) + 1;
-  $('.sPage1').html("<span class='now'>0"+i+"</span><span>0"+slick.slideCount+"</span>");
-});
-$('#section1 .control .ctrl').click(function(){
-  $(this).css({display: 'none'}).siblings('#section1 .control .ctrl').css({display: 'inline-block'});
-  if ($(this).hasClass('bn_stop')) {
-    $('#section1 .post-wrapper').slick('slickPause');
-  } else {
-    $('#section1 .post-wrapper').slick('slickPlay');
-  };
-});
-
 $('#popupzone .post-wrapper').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -549,44 +527,6 @@ $('#popupzone .control .ctrl').click(function(){
   };
 });
 
-let time = 0;
-let interval ;
-let timeSet ; 
-let duration=5;
-
-
-
-    $('#popupzone .post-wrapper').on('afterChange',function(){
-      time=0;
-      duration=5;
-        $(".pro-bar").addClass('pro-ani');
-       $(".pro-ani").css({
-         'animation-duration': '5s',
-       })
-         timeSet = setInterval(function(){
-           duration--;
-         },1000)
-    });
-    $('#popupzone .post-wrapper').on('beforeChange',function(){
-        $(".pro-bar").removeClass('pro-ani');
-        clearInterval(timeSet); 
-    });
-
- $('#popupzone .post-wrapper .slider-box').on('mouseenter',function(){
-   interval = setInterval(function(){
-     time=time+1;
-   },1000)
- })
-
- $('#popupzone .post-wrapper .slider-box').on('mouseleave ',function(){
-   clearInterval(interval); 
-   $(".pro-ani").css({
-     'animation-duration': duration+ time +'s',
-   })
-   duration = duration+ time; 
-   console.log(duration, time)
-   time = 0;
- })
 
 $('#section4 .post-wrapper').slick({
   slidesToShow: 3,

@@ -37,8 +37,6 @@
       <h2 data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="200">당진시민의 <em class="c_point">복지도우미</em></h2>
     </div>
     <!-- slick -->
-
-    <!-- slick -->
     <div id="mv_news" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic">
       <div class="slide_wrap">
           <div class="slide">
@@ -105,7 +103,6 @@
       </div>
     </div>
     <!-- //slick -->
-
   </section>
 
   <section id="section2" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="200">
@@ -260,7 +257,7 @@
     </div>
   </section> 
 
-  <section id="section3" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="400">
+  <section id="section3" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="200">
     <div class="layout">
       <div class="mborad">
         <h2>복지<em>소식</em></h2>
@@ -319,12 +316,12 @@
   
   <section id="section4">
     <div class="layout" id="welfare_fac">
-      <div class="tit" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="800">
+      <div class="tit" data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="400">
       <h2><em>당진 복지광장</em>복지시설안내</h2>
       <p>당진시민이 언제든 이용하실 수 있도록
         <span>복지시설을 운영하고 있습니다.</span></p>
       </div>
-      <div class="tab"  data-aos="fade-right" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="1000">
+      <div class="tab"  data-aos="fade-right" data-aos-offset="0" data-aos-duration="800" data-aos-easing="ease-out-cubic" data-aos-delay="600">
         <strong class="tabbn"><a href="#fac1" class="ov">아동, 청소년</a></strong>
         <div class="grap" id="fac1">
         <!-- slick -->
@@ -685,28 +682,6 @@
 </div>
 
 <script type="text/javascript">
-$('#section1 .post-wrapper').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  variableWidth: true,
-  centerMode: true,
-  centerPadding: '32px',
-});
-$('#section1 .post-wrapper').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){ 
-  var i = (currentSlide ? currentSlide : 0) + 1;
-  $('.sPage1').html("<span class='now'>0"+i+"</span><span>0"+slick.slideCount+"</span>");
-});
-$('#section1 .control .ctrl').click(function(){
-  $(this).css({display: 'none'}).siblings('#section1 .control .ctrl').css({display: 'inline-block'});
-  if ($(this).hasClass('bn_stop')) {
-    $('#section1 .post-wrapper').slick('slickPause');
-  } else {
-    $('#section1 .post-wrapper').slick('slickPlay');
-  };
-});
-
 $("#section4 .grap").each(function(index, element){
     var $this = $(this);
     $this.addClass('instance-' + index);
@@ -729,10 +704,10 @@ $("#section4 .grap").each(function(index, element){
     });
 });
 
-$(".create_box > .click_open").on("click",function(){
+$(".create_box > .click_close").on("click",function(){
     $(this).parent().addClass("on");
 });
-$(".create_box > .click_close").on("click",function(){
+$(".create_box > .click_open").on("click",function(){
     $(this).parents(".create_box").removeClass("on");
 });
 
