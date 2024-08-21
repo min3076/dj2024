@@ -7,7 +7,7 @@ section h2 *{font-family:var(--f_gmarket);font-size:42px;}
 section h2 em{color:#4D8DE7}
 
 #section1{margin-bottom:130px;padding:0 0 640px;background:url(../images/sc1_bg.png) no-repeat 50% 0;background-size:cover}
-#section1 .tit{padding-top:215px}
+#section1 .tit{padding-top:185px}
 #section1 .tit span{display:block;height:40px;margin-bottom:14px;font-size:0;background:url(../images/sc1_tit.png) no-repeat 50% 0;}
 #section1 .tit h2{width:100%;margin:0 0 66px;font-size:52px;font-family:var(--f_gmarket);text-align:center;}
 #section1 .tit h2 em{font-size:52px;}
